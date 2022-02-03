@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+
+* {
+  font-family: Mulish;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+  outline: none;
+  border: none;
+}
+
+$black: #233348;
+$light-color: #1f1534;
+$blue: #458ff6;
+$white: #ffffff;
+
+.page-header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  background: $white;
+  justify-content: space-between;
+  //align-items:center;
+  padding: 2rem 9%;
+  .logo {
+    font-size: 18px;
+  }
+  .navbar {
+    a {
+      color: $light-color;
+      font-size: 18px;
+      margin: 0 1rem;
+      font-weight: 400;
+      opacity: 0.5;
+    }
+  }
+}
+.side-element {
+  padding-top: 5em;
+  position: relative;
+}
+.container {
+  display: flex;
+  position: relative;
+  left: 100px;
+
+  .illustration {
+    flex: 0 1 36rem;
+    height: 30rem;
+    position: relative;
+
+    .description {
+      padding-right: 3em;
+      padding-left: 3em;
+    }
+    .description-title {
+      font-size: 48px;
+      color: $black;
+    }
+    .description-content {
+      font-size: 21px;
+      color: #7d7987;
+    }
+    .illustration-image {
+      margin-top: -15%;
+    }
+    .consult {
+      padding: 1.3em;
+      border-radius: 55px;
+      background-color: $blue;
+      color: $white;
+    }
+  }
+}
