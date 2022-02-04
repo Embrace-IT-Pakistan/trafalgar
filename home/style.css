@@ -16,17 +16,23 @@
 }
 
 .page-header {
-  display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   background: #ffffff;
-  -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 2rem 9%;
+  padding: 2rem 10%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .page-header .logo {
@@ -87,6 +93,10 @@
   color: #7d7987;
 }
 
+.container .illustration .illustration-image {
+  max-height: 100vh;
+}
+
 .container .illustration .consult {
   padding: 1.3em;
   border-radius: 55px;
@@ -99,5 +109,73 @@
   color: #458ff6;
   background-color: #ffffff;
   border: 1px solid #458ff6;
+}
+
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6rem 19%;
+}
+
+.services .services-description {
+  color: #7d7987;
+}
+
+.select-service {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1rem 5rem;
+}
+
+.select-service .card {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 25%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+          box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+}
+
+.select-service .card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.select-service .card-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.select-service .container {
+  padding: 2px 16px;
+}
+
+.select-service .services-description {
+  color: #7d7987;
 }
 /*# sourceMappingURL=style.css.map */

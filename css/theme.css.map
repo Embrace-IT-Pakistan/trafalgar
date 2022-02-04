@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "AAAA,OAAO,CAAC,uHAAI;AAEZ,AAAA,CAAC,CAAC;EACA,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,IAAI;EACrB,cAAc,EAAE,UAAU;EAC1B,UAAU,EAAE,UAAU;EACtB,OAAO,EAAE,IAAI;EACb,MAAM,EAAE,IAAI;CACb",
     "sources": [
-        "style.scss"
+        "theme.scss"
     ],
     "names": [],
-    "file": "style.css"
+    "file": "theme.css"
 }
