@@ -15,14 +15,18 @@ h2 {
 }
 h3 {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 body {
   margin: 0px;
   padding: 0px;
 }
-
+.secondary-consult {
+  background-color: $white;
+  color: $blue;
+  border: 1px solid $blue;
+}
 .page-header {
   display: flex;
   background: #ffffff;
@@ -73,16 +77,15 @@ body {
     }
   }
   .description-title {
-    font-size: 48px;
+    font-size: 36px;
     color: #000000;
     margin: 0%;
-    padding-bottom: 25px;
+    font-weight: 700 bold;
   }
 }
 .description-content {
   font-size: 18px;
   color: #7d7987;
-  padding-bottom: 48px;
   line-height: 32px;
 
   hr {
@@ -96,7 +99,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 192px;
 
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 76px;
+    margin: 0;
+  }
   .services-description {
     color: #7d7987;
     font-size: 16px;
@@ -116,7 +126,8 @@ body {
 hr {
   border: 1px solid black;
   display: block;
-  width: 5%;
+  width: 55px;
+  margin: unset;
 }
 .select-service {
   display: flex;
@@ -151,8 +162,16 @@ hr {
     .card-container {
       padding: 0px;
     }
+    .card-service-image {
+      img {
+        padding-bottom: 10px;
+      }
+    }
   }
   .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  .card-service:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
   .card-container {
@@ -168,9 +187,13 @@ hr {
     color: #7d7987;
     font-size: 16px;
     line-height: 28px;
+    margin: 0px;
+    font-weight: 300;
   }
   .services-label {
     font-weight: 700;
+    margin: 0px;
+    line-height: 56px;
   }
   .consult {
     margin: auto;
@@ -209,6 +232,8 @@ hr {
     }
     hr {
       border: 1px solid $white;
+      margin-left: 512px;
+      margin-right: 512px;
     }
     .info {
       padding: 20px;
@@ -243,17 +268,23 @@ hr {
     text-align: left;
   }
 }
-
+.service-wrapper {
+  .services-label {
+    padding-bottom: 12px;
+    line-height: 32px;
+  }
+  .services-description {
+    padding-bottom: 25px;
+  }
+}
 .footer {
   margin: unset;
   background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
   padding: 120px 0px;
   .box-container {
     @include grid(25rem);
-    // padding: 2rem 9%;
     align-content: space-around;
     .box {
-      // padding: 2rem 9%;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;

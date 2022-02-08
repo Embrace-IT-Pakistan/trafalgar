@@ -5,7 +5,7 @@
   text-decoration: none;
   text-transform: capitalize;
   box-sizing: border-box;
-  outline: none;
+
   border: none;
 }
 
@@ -19,6 +19,7 @@ button {
   border-radius: 55px;
   background-color: $blue;
   color: $white;
+  border: 1px solid $blue;
   cursor: pointer;
   &:hover {
     color: $blue;

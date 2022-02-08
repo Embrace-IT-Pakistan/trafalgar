@@ -6,7 +6,6 @@
   text-transform: capitalize;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: none;
   border: none;
 }
 
@@ -15,6 +14,7 @@ button {
   border-radius: 55px;
   background-color: #458ff6;
   color: #ffffff;
+  border: 1px solid #458ff6;
   cursor: pointer;
 }
 
@@ -36,12 +36,18 @@ h2 {
 
 h3 {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 body {
   margin: 0px;
   padding: 0px;
+}
+
+.secondary-consult {
+  background-color: #ffffff;
+  color: #458ff6;
+  border: 1px solid #458ff6;
 }
 
 .page-header {
@@ -122,16 +128,15 @@ body {
 }
 
 .container .description-title {
-  font-size: 48px;
+  font-size: 36px;
   color: #000000;
   margin: 0%;
-  padding-bottom: 25px;
+  font-weight: 700 bold;
 }
 
 .description-content {
   font-size: 18px;
   color: #7d7987;
-  padding-bottom: 48px;
   line-height: 32px;
 }
 
@@ -152,6 +157,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 192px;
+}
+
+.services h2 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 76px;
+  margin: 0;
 }
 
 .services .services-description {
@@ -174,7 +187,8 @@ body {
 hr {
   border: 1px solid black;
   display: block;
-  width: 5%;
+  width: 55px;
+  margin: unset;
 }
 
 .select-service {
@@ -237,7 +251,16 @@ hr {
   padding: 0px;
 }
 
+.select-service .card-service .card-service-image img {
+  padding-bottom: 10px;
+}
+
 .select-service .card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.select-service .card-service:hover {
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -263,10 +286,14 @@ hr {
   color: #7d7987;
   font-size: 16px;
   line-height: 28px;
+  margin: 0px;
+  font-weight: 300;
 }
 
 .select-service .services-label {
   font-weight: 700;
+  margin: 0px;
+  line-height: 56px;
 }
 
 .select-service .consult {
@@ -323,6 +350,8 @@ hr {
 
 .home .home-slider hr {
   border: 1px solid #ffffff;
+  margin-left: 512px;
+  margin-right: 512px;
 }
 
 .home .home-slider .info {
@@ -374,6 +403,15 @@ hr {
   display: flex;
   padding: 20px;
   text-align: left;
+}
+
+.service-wrapper .services-label {
+  padding-bottom: 12px;
+  line-height: 32px;
+}
+
+.service-wrapper .services-description {
+  padding-bottom: 25px;
 }
 
 .footer {
