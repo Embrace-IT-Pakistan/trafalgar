@@ -13,3 +13,16 @@ $black: #000000;
 $light-color: #1f1534;
 $blue: #458ff6;
 $white: #ffffff;
+
+button {
+  padding: 1.3em 3em;
+  border-radius: 55px;
+  background-color: $blue;
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    color: $blue;
+    background-color: $white;
+    border: 1px solid $blue;
+  }
+}

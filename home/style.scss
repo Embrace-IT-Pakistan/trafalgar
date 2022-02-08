@@ -2,14 +2,20 @@
 @import '../css/theme.scss';
 .wrapper {
   margin: auto;
-  max-width: 1440px;
+  max-width: 1400px;
+}
+@mixin grid($value) {
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr)) [auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.5rem;
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
 }
 .page-header {
-  display: -ms-flexbox;
   display: flex;
   background: #ffffff;
   -ms-flex-pack: justify;
-  padding: 2rem 10%;
+  padding: 1rem 3%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -42,55 +48,72 @@
   flex-direction: row;
   align-content: center;
   justify-content: space-evenly;
+
   .illustration {
     flex: 0 1 36rem;
 
     .description {
-      padding: 3em;
       margin-top: 5rem;
-    }
-    .description-title {
-      font-size: 48px;
-      color: $black;
-      margin: 0%;
-    }
-    .description-content {
-      font-size: 21px;
-      color: #7d7987;
-    }
-    .illustration-image {
-      max-height: 100vh;
-    }
-    .consult {
-      padding: 1.3em;
-      border-radius: 55px;
-      background-color: $blue;
-      color: $white;
-      cursor: pointer;
-
-      &:hover {
-        color: $blue;
-        background-color: $white;
-        border: 1px solid $blue;
-      }
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: flex-start;
     }
   }
+  .description-title {
+    font-size: 48px;
+    color: $black;
+    margin: 0%;
+  }
+  .description-content {
+    font-size: 18px;
+    color: #7d7987;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    line-height: 32px;
+  }
+
+  hr {
+    float: left;
+    width: 10%;
+    margin: unset;
+  }
+
+  // .consult {
+  //   padding: 1.3em;
+  //   border-radius: 55px;
+  //   background-color: $blue;
+  //   color: $white;
+  //   cursor: pointer;
+
+  //   &:hover {
+  //     color: $blue;
+  //     background-color: $white;
+  //     border: 1px solid $blue;
+  //   }
+  // }
 }
+
 .services {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 19%;
+  padding: 4rem 19%;
   .services-description {
     color: #7d7987;
   }
 }
-
+hr {
+  border: 1px solid black;
+  display: block;
+  width: 5%;
+}
 .select-service {
   display: flex;
   justify-content: space-around;
   flex: 1;
   padding: 1rem 5rem;
+  margin: 0;
 
   .card {
     transition: 0.3s;
@@ -115,5 +138,122 @@
   }
   .services-description {
     color: #7d7987;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .services-label {
+    font-weight: 700;
+  }
+  .consult {
+    margin: auto;
+    display: flex;
+  }
+}
+.our-services {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem;
+  .line-break {
+    float: left;
+  }
+  .services-button {
+    padding: 4rem;
+  }
+}
+.home {
+  padding: 8rem;
+
+  .home-slider {
+    background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+    border-radius: 24px;
+    text-align: center;
+    padding: 2rem;
+    color: $white;
+    .flex-box-label {
+      text-align: center;
+    }
+    img {
+      border-radius: 100%;
+    }
+    hr {
+      border: 1px solid $white;
+    }
+    .flex-box {
+      display: flex;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      gap: 2%;
+      h2 {
+        text-align: center;
+      }
+      .flex-item {
+        display: flex;
+        align-items: center;
+        line-height: 0;
+      }
+      .reviews-description {
+        font-size: 19px;
+        line-height: 30px;
+        text-align: left;
+        margin-left: 23%;
+        display: flex;
+        padding-left: 20%;
+        padding-right: 25%;
+      }
+    }
+  }
+}
+.footer {
+  margin: unset;
+
+  .box-container {
+    @include grid(25rem);
+    background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+    width: 1600px;
+    margin: -8px;
+    padding: 2rem 9%;
+    align-content: space-around;
+    .box {
+      padding: 2rem 9%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: space-between;
+      .label {
+        color: $white;
+        font-size: 18px;
+      }
+      .credit {
+        color: $white;
+        font-size: 16px;
+      }
+      h3 {
+        font-size: 20px;
+        color: $white;
+      }
+      a {
+        display: block;
+        font-size: 18px;
+        color: $white;
+        padding: 0.5rem 0;
+
+        i {
+          padding-right: 0.5rem;
+          color: $white;
+        }
+
+        &:hover {
+          color: $white;
+        }
+
+        &:hover i {
+          padding-right: 2rem;
+        }
+      }
+    }
   }
 }
