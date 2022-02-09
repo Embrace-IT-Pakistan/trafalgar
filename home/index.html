@@ -15,9 +15,10 @@
   <link type="text/css" rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Mulish:300,700&display=swap' rel='stylesheet'>
+  <script type="text/javascript"src="./home.js"></script>
 </head>
 
-<body>
+<body  onload="showSlides()">
   <!--header section-->
 
   <header class="wrapper page-header">
@@ -32,10 +33,6 @@
       <a href="#">About us</a>
     </nav>
   </header>
-
-  <!-- <aside>
-      <img class="side-element" src="../assets/images/element.svg" />
-    </aside> -->
     <div
     class="swiper-slide slide"
     style="background: url(../assets/images/background.svg) no-repeat"
@@ -155,6 +152,7 @@
     </div>
   </section>
   </div>
+
   <section class="wrapper container">
     <div class="illustration">
       <img width="700" height="600" class="illustration-image"
@@ -196,8 +194,10 @@
         src="../assets/images/trafalgar-header illustration 1.svg" alt="illustration" />
     </div>
   </section>
-  <div class="swiper-slide slide2">
+
+<div class="swiper-slide slide2">
   <section class="wrapper home">
+    <div class ="slider-container">
     <div class="home-slider">
       <div class="flex-box-label">
         <h2>What our customers are saying</h2>
@@ -218,8 +218,63 @@
         </div>
       </div>
     </div>
+    <div class="home-slider">
+      <div class="flex-box-label">
+    
+        <hr />
+      </div>
+      <div class="flex-box row">
+
+        <div class="col flex-item">
+          <img width="133" height="133" src="../assets/images/reviews.svg" alt="Avatar">
+          <div class="info">
+            <h3>Edward Newgate</h3>
+            <h4>Founder Circle</h4>
+          </div>
+        </div>
+        <div class="col flex-item">
+          <h3 class="reviews-description">Our dedicated patient engagement app and web portal allow you to access
+            information instantaneously (no tedeous form, long calls, or administrative hassle) and securely</h3>
+        </div>
+      </div>
+    </div>
+    <div class="home-slider">
+      <div class="flex-box-label">
+        <h2>What our customers are saying</h2>
+        <hr />
+      </div>
+      <div class="flex-box row">
+
+        <div class="col flex-item">
+          <img width="133" height="133" src="../assets/images/reviews.svg" alt="Avatar">
+          <div class="info">
+            <h3>Edward Newgate</h3>
+            <h4>Founder Circle</h4>
+          </div>
+        </div>
+        <div class="col flex-item">
+          <h3 class="reviews-description">Our dedicated patient engagement app and web portal allow you to access
+            information instantaneously (no tedeous form, long calls, or administrative hassle) and securely</h3>
+        </div>
+      </div>
+    </div>
+    <div class ="slider">
+    <a class="prev" onclick="plusSlides(-1)"><img  class="brand-logo" src="../assets/images/left-arrow.svg" alt="logo" />
+    </a>
+    <div class="slider-dot">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+<a class="next" onclick="plusSlides(1)"><img  class="brand-logo" src="../assets/images/right-arrow.svg" alt="logo" />
+</a>
+    </div>
+   </div>
   </section>
+
 </div>
+
   <div class="swiper-slide slide3">
   <article class="wrapper services">
     <h2>Check out our latest article</h2>
@@ -313,6 +368,6 @@
     </div>
 
   </footer>
+  
 </body>
-
 </html>

@@ -194,7 +194,6 @@ hr {
     flex: 1;
     padding: 33px;
     background-color: $white;
-
     .card-container {
       padding: 0px;
     }
@@ -253,7 +252,6 @@ hr {
 }
 .home {
   padding: 8rem;
-
   .home-slider {
     background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
     border-radius: 24px;
@@ -356,5 +354,44 @@ hr {
         }
       }
     }
+  }
+}
+.slider {
+  color: #458ff6;
+  padding: 30px;
+  display: flex;
+  justify-content: space-evenly;
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-flex;
+    -webkit-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
+    color: #5b9bf3;
+    opacity: 0.3;
+    margin: 27px;
+  }
+  .slider-dot {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-end;
+  }
+  .prev {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .next {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
