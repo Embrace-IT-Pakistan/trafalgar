@@ -160,6 +160,34 @@ body {
   margin: unset;
 }
 
+.swiper-slide {
+  background-image: url(../assets/images/background1.svg), url(../assets/images/background.svg);
+  background-repeat: no-repeat;
+  background-position: left, 1320px center;
+}
+
+.slide1 {
+  background-image: url(../assets/images/background.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.slide2 {
+  background-image: url(../assets/images/background.svg), url(../assets/images/background.svg);
+  background-position: left, top;
+  background-position-x: 12%, 85%;
+  background-position-y: 73%, 25%;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+}
+
+.slide3 {
+  background-image: url(../assets/images/background.svg), url(../assets/images/background2.svg);
+  background-repeat: no-repeat;
+  background-position-x: 6%, 100%;
+  background-position-y: 30%, 45%;
+}
+
 .services {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,6 +265,7 @@ hr {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  background-color: #ffffff;
 }
 
 .select-service .card img {
@@ -259,6 +288,7 @@ hr {
       -ms-flex: 1;
           flex: 1;
   padding: 33px;
+  background-color: #ffffff;
 }
 
 .select-service .card-service .card-container {
