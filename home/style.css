@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
 * {
-  font-family: Mulish;
+  font-family: Mulish, Arial, Helvetica, sans-serif;
   text-decoration: none;
   text-transform: capitalize;
   -webkit-box-sizing: border-box;
@@ -9,19 +9,27 @@
   border: none;
 }
 
+@font-face {
+  font-family: Mulish, Arial, Helvetica, sans-serif;
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 button {
   padding: 1.3em 3em;
   border-radius: 55px;
-  background-color: #458ff6;
+  background-color: #056dff;
   color: #ffffff;
-  border: 1px solid #458ff6;
+  border: 1px solid #056dff;
   cursor: pointer;
 }
 
 button:hover {
-  color: #458ff6;
+  color: #056dff;
   background-color: #ffffff;
-  border: 1px solid #458ff6;
+  border: 1px solid #056dff;
 }
 
 .wrapper {
@@ -30,8 +38,9 @@ button:hover {
 }
 
 h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 22px;
+  font-display: swap;
+  font-weight: 300;
 }
 
 h3 {
@@ -46,8 +55,8 @@ body {
 
 .secondary-consult {
   background-color: #ffffff;
-  color: #458ff6;
-  border: 1px solid #458ff6;
+  color: #056dff;
+  border: 1px solid #056dff;
 }
 
 .page-header {
@@ -55,11 +64,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   background: #ffffff;
-  -ms-flex-pack: justify;
   padding: 62px 0px;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-orient: horizontal;
@@ -67,7 +75,9 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
           justify-content: space-between;
+  font-display: swap;
 }
 
 .page-header .logo {
@@ -75,15 +85,15 @@ body {
 }
 
 .page-header .navbar a {
-  color: #1f1534;
+  color: #757575;
   font-size: 18px;
   margin: 0 1rem;
-  font-weight: 400;
-  opacity: 0.5;
+  font-weight: 300;
+  font-display: swap;
 }
 
 .page-header .navbar a:hover, .page-header .navbar a:active {
-  color: #458ff6;
+  color: #056dff;
 }
 
 .side-element {
@@ -132,11 +142,13 @@ body {
   color: #000000;
   margin: 0%;
   font-weight: 700 bold;
+  font-display: swap;
 }
 
 .description-content {
   font-size: 18px;
-  color: #7d7987;
+  font-display: swap;
+  color: #757575;
   line-height: 32px;
 }
 
@@ -168,14 +180,14 @@ body {
 }
 
 .services .services-description {
-  color: #7d7987;
+  color: #757575;
   font-size: 16px;
   line-height: 28px;
   font-weight: 300;
 }
 
 .services .services-descriptions {
-  color: #7d7987;
+  color: #757575;
   font-size: 18px;
   line-height: 30px;
   font-weight: 300;
@@ -206,7 +218,7 @@ hr {
 }
 
 .select-service a {
-  color: #458ff6;
+  color: #056dff;
 }
 
 .select-service .card {
@@ -283,7 +295,7 @@ hr {
 }
 
 .select-service .services-description {
-  color: #7d7987;
+  color: #757575;
   font-size: 16px;
   line-height: 28px;
   margin: 0px;

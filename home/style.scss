@@ -10,8 +10,9 @@
   gap: 145px;
 }
 h2 {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 22px;
+  font-display: swap;
+  font-weight: 300;
 }
 h3 {
   font-size: 22px;
@@ -30,14 +31,12 @@ body {
 .page-header {
   display: flex;
   background: #ffffff;
-  -ms-flex-pack: justify;
   padding: 62px 0px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   align-content: center;
   flex-direction: row;
   justify-content: space-between;
+  font-display: swap;
   .logo {
     font-size: 18px;
   }
@@ -46,8 +45,8 @@ body {
       color: $light-color;
       font-size: 18px;
       margin: 0 1rem;
-      font-weight: 400;
-      opacity: 0.5;
+      font-weight: 300;
+      font-display: swap;
       &:hover,
       &:active {
         color: $blue;
@@ -81,11 +80,13 @@ body {
     color: #000000;
     margin: 0%;
     font-weight: 700 bold;
+    font-display: swap;
   }
 }
 .description-content {
   font-size: 18px;
-  color: #7d7987;
+  font-display: swap;
+  color: $light-color;
   line-height: 32px;
 
   hr {
@@ -108,13 +109,13 @@ body {
     margin: 0;
   }
   .services-description {
-    color: #7d7987;
+    color: $light-color;
     font-size: 16px;
     line-height: 28px;
     font-weight: 300;
   }
   .services-descriptions {
-    color: #7d7987;
+    color: $light-color;
     font-size: 18px;
     line-height: 30px;
     font-weight: 300;
@@ -184,7 +185,7 @@ hr {
     padding: 2px 16px;
   }
   .services-description {
-    color: #7d7987;
+    color: $light-color;
     font-size: 16px;
     line-height: 28px;
     margin: 0px;

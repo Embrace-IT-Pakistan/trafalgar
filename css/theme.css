@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
 * {
-  font-family: Mulish;
+  font-family: Mulish, Arial, Helvetica, sans-serif;
   text-decoration: none;
   text-transform: capitalize;
   -webkit-box-sizing: border-box;
@@ -11,15 +11,15 @@
 button {
   padding: 1.3em 3em;
   border-radius: 55px;
-  background-color: #458ff6;
+  background-color: #056dff;
   color: #ffffff;
-  border: 1px solid #458ff6;
+  border: 1px solid #056dff;
   cursor: pointer;
 }
 
 button:hover {
-  color: #458ff6;
+  color: #056dff;
   background-color: #ffffff;
-  border: 1px solid #458ff6;
+  border: 1px solid #056dff;
 }
 /*# sourceMappingURL=theme.css.map */
