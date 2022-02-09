@@ -23,6 +23,7 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
 .secondary-consult {
   background-color: $white;
   color: $blue;
@@ -63,12 +64,15 @@ body {
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
+  background-repeat: no-repeat;
 
   .illustration {
     flex: 0 1 36rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     .description {
-      margin-top: 5rem;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
@@ -230,6 +234,7 @@ hr {
     }
     img {
       border-radius: 100%;
+      align-self: center;
     }
     hr {
       border: 1px solid $white;
