@@ -29,28 +29,37 @@ body {
   color: $blue;
   border: 1px solid $blue;
 }
-.page-header {
-  display: flex;
-  background: #ffffff;
-  padding: 62px 0px;
-  align-items: center;
-  align-content: center;
-  flex-direction: row;
-  justify-content: space-between;
-  font-display: swap;
-  .logo {
-    font-size: 18px;
-  }
-  .navbar {
-    a {
-      color: $light-color;
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  .page-header {
+    display: flex;
+    background: #ffffff;
+    padding: 30px 0px;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-display: swap;
+    .logo {
       font-size: 18px;
-      margin: 0 1rem;
-      font-weight: 300;
-      font-display: swap;
-      &:hover,
-      &:active {
-        color: $blue;
+    }
+    .navbar {
+      a {
+        color: $light-color;
+        font-size: 18px;
+        margin: 0 1rem;
+        font-weight: 300;
+        font-display: swap;
+        &:hover,
+        &:active {
+          color: $blue;
+        }
       }
     }
   }
@@ -65,6 +74,7 @@ body {
   align-content: center;
   justify-content: space-between;
   background-repeat: no-repeat;
+  padding-top: 100px;
 
   .illustration {
     flex: 0 1 36rem;
@@ -105,6 +115,11 @@ body {
     url(../assets/images/background.svg);
   background-repeat: no-repeat;
   background-position: left, 1320px center;
+}
+.slide0 {
+  background-image: url(../assets/images/background.svg);
+  background-position-y: 20%;
+  background-repeat: no-repeat;
 }
 
 .slide1 {

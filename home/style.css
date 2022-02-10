@@ -51,12 +51,22 @@ body {
   border: 1px solid #056dff;
 }
 
-.page-header {
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background: #ffffff;
-  padding: 62px 0px;
+  padding: 30px 0px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -72,11 +82,11 @@ body {
   font-display: swap;
 }
 
-.page-header .logo {
+.header .page-header .logo {
   font-size: 18px;
 }
 
-.page-header .navbar a {
+.header .page-header .navbar a {
   color: #757575;
   font-size: 18px;
   margin: 0 1rem;
@@ -84,7 +94,7 @@ body {
   font-display: swap;
 }
 
-.page-header .navbar a:hover, .page-header .navbar a:active {
+.header .page-header .navbar a:hover, .header .page-header .navbar a:active {
   color: #056dff;
 }
 
@@ -107,6 +117,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-repeat: no-repeat;
+  padding-top: 100px;
 }
 
 .container .illustration {
@@ -164,6 +175,12 @@ body {
   background-image: url(../assets/images/background1.svg), url(../assets/images/background.svg);
   background-repeat: no-repeat;
   background-position: left, 1320px center;
+}
+
+.slide0 {
+  background-image: url(../assets/images/background.svg);
+  background-position-y: 20%;
+  background-repeat: no-repeat;
 }
 
 .slide1 {
