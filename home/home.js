@@ -28,6 +28,10 @@ function showSlides() {
 }
 
 function initEvents() {
+  $carousel.on( 'change.flickity', function( event, index ) {
+    $('.dot.active').removeClass('active');
+    $(`.dot[data-index="${index}"`).addClass("active");
+  });
   $('.next').on('click', function () {
     $carousel.flickity('next')
   })
@@ -35,10 +39,6 @@ function initEvents() {
     $carousel.flickity('previous')
   })
   $('.dot').on('click', function () {
-    for (let index = 0; index < 3; index++) {
-      $('.dot.active').removeClass('active')
-    }
-    $(this).addClass('active')
     const index = $(this).data('index')
     $carousel.flickity('select', index)
   })
