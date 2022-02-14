@@ -1,3 +1,5 @@
+var $carousel;
+
 function headerScroll() {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop()
@@ -10,7 +12,7 @@ function headerScroll() {
 }
 
 function showSlides() {
-  var $carousel = $('.main-carousel').flickity({
+  $carousel = $('.main-carousel').flickity({
     cellAlign: 'left',
     contain: true,
     wrapAround: true,
