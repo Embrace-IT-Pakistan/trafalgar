@@ -45,6 +45,10 @@ body {
   padding: 0px;
 }
 
+.main-carousel {
+  border-radius: 24px;
+}
+
 .secondary-consult {
   background-color: #ffffff;
   color: #056dff;
@@ -58,11 +62,13 @@ body {
   right: 0;
   left: 0;
   background-color: #ffffff;
+  z-index: 1;
 }
 
 .header.active {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .header .page-header {
@@ -417,22 +423,28 @@ hr {
 }
 
 .home .home-slider .prevSlide {
-  -webkit-animation-name: fade1;
-          animation-name: fade1;
+  -webkit-animation-name: prevSlide;
+          animation-name: prevSlide;
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
 }
 
 @-webkit-keyframes fade {}@keyframes fade {
-  0% {
+  75% {
+    left: 0;
     -webkit-transform: skewX(0deg) translateX(300px);
             transform: skewX(0deg) translateX(300px);
   }
-  60% {
+  95% {
+    left: 100%;
   }
-  100% {
+  98% {
+    left: 100%;
     -webkit-transform: skew(0deg);
             transform: skew(0deg);
+  }
+  99% {
+    left: 0;
   }
 }
 
@@ -650,5 +662,40 @@ hr {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+}
+
+/* external css: flickity.css */
+.gallery {
+  background: #eee;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8c8;
+  counter-increment: gallery-cell;
+  /* cell number */
+}
+
+.gallery-cell .home-slider {
+  background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+  border-radius: 24px;
+  text-align: center;
+  padding: 2rem;
+  color: #ffffff;
+}
+
+.gallery-cell .home-slider .flex-box-label {
+  text-align: center;
+}
+
+.gallery-cell .gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,45 +1,37 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex = 1
+showSlides(slideIndex)
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides((slideIndex += n))
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n))
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("home-slider");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  // slides[slideIndex - 1].className += "prevSlide";
-  dots[slideIndex - 1].className += " active";
+  // var slides = document.getElementsByClassName("main-carousel");
+  // var dots = document.getElementsByClassName("dot");
+  // if (n < 1) {slideIndex = slides.length}
+  // dots[slideIndex-1].className += " active";
   $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
+    var scroll = $(window).scrollTop()
     if (scroll > 0) {
-      $(".header").addClass("active");
+      $('.header').addClass('active')
+    } else {
+      $('.header').removeClass('active')
     }
-    else {
-      $(".header").removeClass("active");
-    }
-  });
-}
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+  })
+  $('.main-carousel').flickity({
+    cellAlign: 'left',
+    contain: true,
+  })
+  var $carousel = $('.main-carousel').flickity()
+  $('.next').on('click', function () {
+    $carousel.flickity('next')
+  })
+  $('.prev').on('click', function () {
+    $carousel.flickity('previous')
+  })
 }
 

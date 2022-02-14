@@ -23,7 +23,9 @@ body {
   margin: 0px;
   padding: 0px;
 }
-
+.main-carousel {
+  border-radius: 24px;
+}
 .secondary-consult {
   background-color: $white;
   color: $blue;
@@ -36,8 +38,10 @@ body {
   right: 0;
   left: 0;
   background-color: $white;
+  z-index: 1;
   &.active {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
   .page-header {
     display: flex;
@@ -285,21 +289,41 @@ hr {
       animation-duration: 1.5s;
     }
     .prevSlide {
-      animation-name: fade1;
+      animation-name: prevSlide;
       animation-duration: 5s;
     }
 
     @-webkit-keyframes fade {
     }
-
+    // @keyframes prevSlide {
+    //   75% {
+    //     left: 0;
+    //     transform: skewX(0deg) translateX(-300px);
+    //   }
+    //   95% {
+    //     left: -300%;
+    //   }
+    //   98% {
+    //     left: -300%;
+    //   }
+    //   99% {
+    //     left: 0;
+    //   }
+    // }
     @keyframes fade {
-      0% {
+      75% {
+        left: 0;
         transform: skewX(0deg) translateX(300px);
       }
-      60% {
+      95% {
+        left: 100%;
       }
-      100% {
+      98% {
+        left: 100%;
         transform: skew(0deg);
+      }
+      99% {
+        left: 0;
       }
     }
     img {
@@ -441,5 +465,38 @@ hr {
     flex-wrap: wrap;
     align-items: center;
     cursor: pointer;
+  }
+}
+/* external css: flickity.css */
+
+.gallery {
+  background: #eee;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8c8;
+  counter-increment: gallery-cell;
+  .home-slider {
+    background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+    border-radius: 24px;
+    text-align: center;
+    padding: 2rem;
+    color: $white;
+    .flex-box-label {
+      text-align: center;
+    }
+  }
+
+  /* cell number */
+  .gallery-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
   }
 }
