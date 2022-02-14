@@ -13,7 +13,10 @@ function showSlides() {
   var $carousel = $('.main-carousel').flickity({
     cellAlign: 'left',
     contain: true,
-  })
+    wrapAround: true,
+    prevNextButtons: false,
+    pageDots: false
+  });
   $('.next').on('click', function () {
     $carousel.flickity('next')
   })
@@ -22,8 +25,8 @@ function showSlides() {
   })
 }
 
-$( document ).ready(function() {
- showSlides();
- headerScroll();
+$(document).ready(function () {
+  showSlides();
+  headerScroll();
 });
 
