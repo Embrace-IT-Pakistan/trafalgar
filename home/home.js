@@ -32,15 +32,17 @@ function initEvents() {
   $('.prev').on('click', function () {
     $carousel.flickity('previous')
   })
+  debugger;
   $('.dot').on('click', function () {
     const index = $(this).data("index")
-    $carousel.select(index);
+    $carousel.flickity( 'select', index );
   })
 }
 
 $(document).ready(function () {
   showSlides();
   headerScroll();
-  initEvents();
+  setTimeout(initEvents(),3000);
+  
 });
 
