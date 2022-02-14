@@ -10,10 +10,14 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  // var slides = document.getElementsByClassName("main-carousel");
-  // var dots = document.getElementsByClassName("dot");
-  // if (n < 1) {slideIndex = slides.length}
-  // dots[slideIndex-1].className += " active";
+// var slides = document.getElementsByClassName("main-carousel");
+//   var dots = document.getElementsByClassName("dot");
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+// }  
+//   dots[slideIndex-1].className += " active";
+  
   $(window).scroll(function () {
     var scroll = $(window).scrollTop()
     if (scroll > 0) {
