@@ -22,7 +22,17 @@ function showSlides(n) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex - 1].style.display = "block";
+  // slides[slideIndex - 1].className += "prevSlide";
   dots[slideIndex - 1].className += " active";
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > 0) {
+      $(".header").addClass("active");
+    }
+    else {
+      $(".header").removeClass("active");
+    }
+  });
 }
 
 function plusSlides(n) {
