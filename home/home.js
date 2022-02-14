@@ -32,7 +32,6 @@ function initEvents() {
   $('.prev').on('click', function () {
     $carousel.flickity('previous')
   })
-  debugger;
   $('.dot').on('click', function () {
     const index = $(this).data("index")
     $carousel.flickity( 'select', index );
