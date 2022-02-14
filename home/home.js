@@ -38,11 +38,15 @@ function initEvents() {
     for (let index = 0; index < 3; index++) {
       $('.dot.active').removeClass('active')
     }
+    $(this).addClass('active')
     const index = $(this).data('index')
     $carousel.flickity('select', index)
   })
 }
-
+function slider()
+{
+$()
+}
 $(document).ready(function () {
   showSlides()
   headerScroll()
