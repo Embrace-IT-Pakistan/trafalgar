@@ -17,16 +17,28 @@ function showSlides() {
     prevNextButtons: false,
     pageDots: false
   });
+
+  for (let index = 0; index < 3; index++) {
+    $(".slider-dot").append(`<span class="dot" data-index="${index}"></span>`);
+  }
+}
+
+function initEvents() {
   $('.next').on('click', function () {
     $carousel.flickity('next')
   })
   $('.prev').on('click', function () {
     $carousel.flickity('previous')
   })
+  $('.dot').on('click', function () {
+    const index = $(this).data("index")
+    $carousel.select(index);
+  })
 }
 
 $(document).ready(function () {
   showSlides();
   headerScroll();
+  initEvents();
 });
 
