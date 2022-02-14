@@ -1,4 +1,4 @@
-var $carousel;
+var $carousel
 
 function headerScroll() {
   $(window).scroll(function () {
@@ -17,11 +17,13 @@ function showSlides() {
     contain: true,
     wrapAround: true,
     prevNextButtons: false,
-    pageDots: false
-  });
+    pageDots: false,
+  })
 
   for (let index = 0; index < 3; index++) {
-    $(".slider-dot").append(`<span class="dot" data-index="${index}"></span>`);
+    $('.slider-dot').append(
+      `<span data-my-element="dotted" id="${index}" class="dot" data-index="${index}"></span>`
+    )
   }
 }
 
@@ -33,15 +35,16 @@ function initEvents() {
     $carousel.flickity('previous')
   })
   $('.dot').on('click', function () {
-    const index = $(this).data("index")
-    $carousel.flickity( 'select', index );
+    for (let index = 0; index < 3; index++) {
+      $('.dot.active').removeClass('active')
+    }
+    const index = $(this).data('index')
+    $carousel.flickity('select', index)
   })
 }
 
 $(document).ready(function () {
-  showSlides();
-  headerScroll();
-  setTimeout(initEvents(),3000);
-  
-});
-
+  showSlides()
+  headerScroll()
+  initEvents()
+})
