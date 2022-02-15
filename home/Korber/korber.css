@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+* {
+  font-family: Mulish, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+}
+
+button {
+  padding: 1.3em 3em;
+  border-radius: 55px;
+  background-color: #056dff;
+  color: #ffffff;
+  border: 1px solid #056dff;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #056dff;
+  background-color: #ffffff;
+  border: 1px solid #056dff;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 700px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.row form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+  border-radius: 0.5rem;
+}
+
+.row form h3 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  color: #000000;
+}
+
+.row form .inputBox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  /* gap: 2%; */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 20px;
+}
+
+.row form .inputBox input {
+  width: 49%;
+}
+
+.row form .inputBox input,
+.row form textarea {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+  /* border-radius: 0.5rem; */
+  padding: 1rem 2.2rem;
+  font-size: 1.6rem;
+  color: #000000;
+  text-transform: none;
+  margin: 0.7rem 0;
+  background: rgba(245, 243, 241, 0.8);
+}
+
+.row form textarea {
+  height: 15rem;
+  resize: none;
+  width: 100%;
+}
+
+.row .map {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+  width: 100%;
+  padding: 2rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.contact .row form .inputBox input {
+  width: 320px;
+  height: 40px;
+}
+/*# sourceMappingURL=korber.css.map */

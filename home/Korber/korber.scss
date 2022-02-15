@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+@import '../../css/theme.scss';
+$border: 0.1rem solid rgba(0, 0, 0, 0.3);
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+.wrapper {
+  margin: auto;
+  max-width: 700px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+
+  form {
+    flex: 1 1 42rem;
+    border-radius: 0.5rem;
+
+    h3 {
+      font-size: 3rem;
+      padding-bottom: 1rem;
+      color: $black;
+    }
+
+    .inputBox {
+      display: inline-flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      /* gap: 2%; */
+      flex-direction: column;
+      margin-right: 20px;
+
+      input {
+        width: 49%;
+      }
+    }
+
+    .inputBox input,
+    textarea {
+      border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+      /* border-radius: 0.5rem; */
+      padding: 1rem 2.2rem;
+      font-size: 1.6rem;
+      color: #000000;
+      text-transform: none;
+      margin: 0.7rem 0;
+      background: rgba(245, 243, 241, 0.8);
+    }
+
+    textarea {
+      height: 15rem;
+      resize: none;
+      width: 100%;
+    }
+  }
+
+  .map {
+    flex: 1 1 42rem;
+    width: 100%;
+    padding: 2rem;
+    border: $border;
+    border-radius: 0.5rem;
+    box-shadow: $box-shadow;
+  }
+}
+.contact .row form .inputBox input {
+  width: 320px;
+  height: 40px;
+}
