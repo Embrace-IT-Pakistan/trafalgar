@@ -45,6 +45,7 @@ h3 {
 
 .brand-logo {
   margin-top: 37px;
+  margin-bottom: 20px;
 }
 
 .row {
@@ -54,7 +55,6 @@ h3 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 1.5rem;
-  margin-top: 2rem;
 }
 
 .row form {
@@ -87,7 +87,7 @@ h3 {
 .row form .inputBox select {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
   /* border-radius: 0.5rem; */
-  padding: 0.7rem 0.05rem;
+  padding: 0rem 16px;
   font-size: 0.8rem;
   color: #000000;
   text-transform: none;
@@ -101,7 +101,7 @@ h3 {
 .row form textarea {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
   /* border-radius: 0.5rem; */
-  padding: 1rem 2.2rem;
+  padding: 12px 16px;
   font-size: 1.6rem;
   color: #000000;
   text-transform: none;
@@ -109,23 +109,14 @@ h3 {
   background: rgba(245, 243, 241, 0.8);
   width: 660px;
   height: 100px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
 }
 
 .row form .btn {
   float: right;
   margin-right: 35px;
-}
-
-.row .map {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 42rem;
-          flex: 1 1 42rem;
-  width: 100%;
-  padding: 2rem;
-  border: 0.1rem solid rgba(0, 0, 0, 0.3);
-  border-radius: 0.5rem;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .contact .row form .inputBox input {
