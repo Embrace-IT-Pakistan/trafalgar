@@ -2,10 +2,23 @@
 @import '../../css/theme.scss';
 $border: 0.1rem solid rgba(0, 0, 0, 0.3);
 $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 14px;
+  font-weight: 800;
+}
 .wrapper {
   margin: auto;
   max-width: 700px;
+}
+.header-label {
+  line-height: 30px;
+}
+.brand-logo {
+  margin-top: 37px;
 }
 .row {
   display: flex;
@@ -16,12 +29,6 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   form {
     flex: 1 1 42rem;
     border-radius: 0.5rem;
-
-    h3 {
-      font-size: 3rem;
-      padding-bottom: 1rem;
-      color: $black;
-    }
 
     .inputBox {
       display: inline-flex;
@@ -36,6 +43,18 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
       input {
         width: 49%;
       }
+      select {
+        border-bottom: 0.1rem solid rgba(0, 0, 0, 0.3);
+        /* border-radius: 0.5rem; */
+        padding: 0.7rem 0.05rem;
+        font-size: 0.8rem;
+        color: #000000;
+        text-transform: none;
+        margin: 0.6rem 0;
+        background: rgba(245, 243, 241, 0.8);
+        width: 320px;
+        height: 40px;
+      }
     }
 
     .inputBox input,
@@ -48,12 +67,12 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
       text-transform: none;
       margin: 0.7rem 0;
       background: rgba(245, 243, 241, 0.8);
+      width: 660px;
+      height: 100px;
     }
-
-    textarea {
-      height: 15rem;
-      resize: none;
-      width: 100%;
+    .btn {
+      float: right;
+      margin-right: 35px;
     }
   }
 
