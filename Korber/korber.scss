@@ -12,7 +12,7 @@ h3 {
 }
 .wrapper {
   margin: auto;
-  max-width: 700px;
+  max-width: 661px;
 }
 .header-label {
   line-height: 30px;
@@ -29,7 +29,11 @@ h3 {
   form {
     flex: 1 1 42rem;
     border-radius: 0.5rem;
-
+    .input-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
     .inputBox {
       display: inline-flex;
       -ms-flex-wrap: wrap;
@@ -38,8 +42,11 @@ h3 {
       -ms-flex-pack: justify;
       /* gap: 2%; */
       flex-direction: column;
-      margin-right: 20px;
-
+      .input-label {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16px;
+      }
       input {
         width: 49%;
       }

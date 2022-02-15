@@ -36,7 +36,7 @@ h3 {
 
 .wrapper {
   margin: auto;
-  max-width: 700px;
+  max-width: 661px;
 }
 
 .header-label {
@@ -64,6 +64,15 @@ h3 {
   border-radius: 0.5rem;
 }
 
+.row form .input-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+}
+
 .row form .inputBox {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -77,7 +86,12 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 20px;
+}
+
+.row form .inputBox .input-label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
 }
 
 .row form .inputBox input {
