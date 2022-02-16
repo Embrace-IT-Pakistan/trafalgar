@@ -132,7 +132,7 @@ h3 {
   text-align: left;
 }
 
-.row form .btn {
+.row form #btn {
   float: right;
   padding: 10px 32px;
 }
