@@ -23,12 +23,11 @@ $(document).ready(function () {
         <td>${email}</td>
         <td>${selectedCountry}</td>
         <td>${selectedLanguage}</td>
-        <td class ="delete"> <i class="fa fa-trash"></i>
+        <td> <i class="fa fa-trash"></i>
       </tr>`
     )
   })
-  $('.delete').on('click', function () {
-    alert('hello')
-    $(this).closest('tr').remove()
+  $(document).on('click', '.fa-trash', function () {
+    $(this).parent().parent().remove()
   })
 })
