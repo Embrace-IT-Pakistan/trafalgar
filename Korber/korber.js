@@ -23,7 +23,11 @@ $(document).ready(function () {
         <td>${email}</td>
         <td>${selectedCountry}</td>
         <td>${selectedLanguage}</td>
+        <td class ="delete"> <i class="fa-thin fa-trash"></i></td>
       </tr>`
     )
+  })
+  $('#user-form').on('click', '.delete', function () {
+    $(this).closest('tr').remove()
   })
 })
