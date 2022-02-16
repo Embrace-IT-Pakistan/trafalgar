@@ -14,6 +14,10 @@ h3 {
   margin: auto;
   max-width: 661px;
 }
+.wrapper-table {
+  margin: auto;
+  max-width: 1234px;
+}
 .header-label {
   line-height: 30px;
   margin-top: 0px;
@@ -66,7 +70,9 @@ h3 {
         font-family: 'FontAwesome', Verdana;
         -webkit-appearance: none;
         // background: #f5f3f1
-        background: #f5f3f1 url('../assets/images/arrow-down.svg') no-repeat 96%;
+        background: #f5f3f1 url('../assets/images/arrow-down.svg') no-repeat;
+        background-position: right 10px bottom 6px;
+        line-height: 16px;
       }
     }
 
@@ -90,6 +96,25 @@ h3 {
       float: right;
       padding: 10px 32px;
     }
+  }
+}
+table {
+  padding-top: 206px;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  border-spacing: 0px;
+  th {
+    padding: 12px 0px 12px 0px;
+  }
+  td {
+    text-align: center;
+    padding: 12px 0px 12px 0px;
+  }
+  tr:nth-child(even) {
+    background-color: #e6e2dc;
+  }
+  .table-header {
+    background-color: #e6e2dc;
   }
 }
 .contact .row form .inputBox input {
