@@ -1,37 +1,6 @@
-// $(document).ready(function () {
-//   $('#user-form').submit(function (e) {
-//     e.preventDefault()
-//     const firstName = $(this).find('input[name="firstName"]').val()
-//     const lastName = $(this).find('input[name="lastName"]').val()
-//     const company = $(this).find('input[name="company"]').val()
-//     const email = $(this).find('input[name="email"]').val()
-//     const country = $(this).find('select[name="country"]').val()
-//     const language = $(this).find('select[name="language"]').val()
-//     const selectedCountry = $(this)
-//       .find('select[name="country"]')
-//       .find(`option[value="${country}"]`)
-//       .text()
-//     const selectedLanguage = $(this)
-//       .find('select[name="language"]')
-//       .find(`option[value="${language}"]`)
-//       .text()
-//     $('#tableBody').append(
-//       `<tr>
-//         <td>${firstName}</td>
-//         <td>${lastName}</td>
-//         <td>${company}</td>
-//         <td>${email}</td>
-//         <td>${selectedCountry}</td>
-//         <td>${selectedLanguage}</td>
-//         <td> <i class="fa fa-trash"></i>
-//       </tr>`
-//     )
-//   })
-//   $(document).on('click', '.fa-trash', function () {
-//     $(this).parent().parent().remove()
-//   })
-// })
+var count = 0
 const form = document.getElementById('user-form')
+
 form.addEventListener('submit', (event) => {
   event.preventDefault()
   const firstName = form.elements['firstName'].value
@@ -43,22 +12,53 @@ form.addEventListener('submit', (event) => {
   const language = form.elements['language']
   const selectedLanguage = language.options[language.selectedIndex].text
 
-  const table = document.getElementById('recordTable')
-  var html =
-    '<tr><td>' +
-    firstName +
-    '</td><td>' +
-    lastName +
-    '</td><td>' +
-    company +
-    '</td><td>' +
-    email +
-    '</td><td>' +
-    selectedCountry +
-    '</td><td>' +
-    selectedLanguage +
-    '<td id="delete"></td></tr>'
+  const html = `<tr class="table-row" data-id="">
+  <td>
+  ${firstName}
+  </td>
+  <td>
+  ${lastName}
+  </td>
+  <td>
+  ${company}
+  </td>
+  <td>
+  ${email}
+  </td>
+  <td>
+  ${selectedCountry}
+  </td>
+  <td>
+  ${selectedLanguage}
+  </td>
+  <td class="delete"><i class="fa fa-trash"></i></td></tr>
+  `
 
   document.getElementById('tableBody').innerHTML += html
-  document.getElementById('delete').innerHTML = '<i class="fa fa-trash">'
+  initEvents()
+  updateIndex()
 })
+
+function initEvents() {
+  const elements = document.querySelectorAll('.table-row')
+  elements.forEach((_child, _index) => {
+    const deleteButton = _child.querySelector('.delete')
+    deleteButton.dataset.index = _index
+    deleteButton.addEventListener('click', () => {
+      const index = Number(deleteButton.dataset.index)
+      const deletedElement = document.querySelector(
+        `#tableBody tr:nth-child(${index + 1})`
+      )
+      if (deletedElement) deletedElement.remove()
+      updateIndex()
+    })
+  })
+}
+
+function updateIndex() {
+  const elements = document.querySelectorAll('.table-row')
+  elements.forEach((_child, _index) => {
+    const deleteButton = _child.querySelector('.delete')
+    deleteButton.dataset.index = _index
+  })
+}
