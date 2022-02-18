@@ -546,15 +546,24 @@
         </button>
       </form>
     </section>
+
     <section class="wrapper-table record-table">
+      <button class="submit" value="Sort by Name" onclick="sortbyName()">
+        Sort by Name
+      </button>
       <table id="recordTable" class="tableRecord">
         <tr class="table-header">
-          <th>First Name</th>
-          <th>Last Name</th>
+          <th>ID</th>
+          <th>isActive</th>
+          <th>Picture</th>
+
+          <th>Age</th>
+          <th>Name</th>
+          <th>Gender</th>
           <th>Company</th>
           <th>Email</th>
-          <th>Country</th>
-          <th>Language</th>
+          <th>Phone</th>
+          <th>Address</th>
           <th></th>
         </tr>
         <tbody id="tableBody"></tbody>
