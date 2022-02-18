@@ -548,16 +548,22 @@
     </section>
 
     <section class="wrapper-table record-table">
-      <button class="submit" value="Sort by Name" onclick="sortbyName()">
-        Sort by Name
-      </button>
-      <button
-        class="submit"
-        value="Sort by Active Status"
-        onclick="sortbyActiveStatus()"
-      >
-        Sort by Active Status
-      </button>
+      <div class="operations">
+        <button class="submit" value="Sort by Name" onclick="sortbyName()">
+          Sort by Name
+        </button>
+        <button
+          class="submit"
+          value="Sort by Active Status"
+          onclick="sortbyActiveStatus()"
+        >
+          Sort by Active Status
+        </button>
+        <button class="submit" value="" onclick="averageAge()">
+          Average Age
+        </button>
+      </div>
+      <p id="age"></p>
       <table id="recordTable" class="tableRecord">
         <tr class="table-header">
           <th>ID</th>

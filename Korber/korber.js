@@ -1346,3 +1346,20 @@ function sortbyActiveStatus() {
   })
   displayArray(newArray)
 }
+function averageAge() {
+  for (var i = 0; i < document.getElementById('tableBody').rows.length; i++) {
+    $('.table-row').remove()
+  }
+  let getAverage = (arr) => {
+    let reducer = (total, currentValue) => total + currentValue
+    let sum = arr.reduce(reducer)
+    return sum / arr.length
+  }
+
+  let ages = array.map((person) => person.age)
+  const averageAge = getAverage(ages)
+  console.log(averageAge)
+  console.log(document.getElementsByTagName('p'))
+  document.getElementById('age').innerText +=
+    'The average age is : ' + averageAge
+}

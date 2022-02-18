@@ -119,3 +119,14 @@ table {
   width: 320px;
   height: 40px;
 }
+#age {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.operations {
+  display: flex;
+  justify-content: space-evenly;
+}
