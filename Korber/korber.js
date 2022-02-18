@@ -1285,7 +1285,7 @@ function displayArray(array) {
   ${isActive}
   </td>
   <td>
-  ${picture}
+  <img src="${picture}" alt="img" />
   </td>
   <td>
   ${age}
@@ -1341,7 +1341,7 @@ function sortbyActiveStatus() {
   for (var i = 0; i < document.getElementById('tableBody').rows.length; i++) {
     $('.table-row').remove()
   }
-  var newArray = array.filter(function (el) {
+  var newArray = array.filter((el) => {
     return el.isActive == true
   })
   displayArray(newArray)
@@ -1352,7 +1352,7 @@ function averageAge() {
   }
   let getAverage = (arr) => {
     let reducer = (total, currentValue) => total + currentValue
-    let sum = arr.reduce(reducer)
+    let sum = arr.reduce(reducer, 0)
     return sum / arr.length
   }
 

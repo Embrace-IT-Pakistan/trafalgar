@@ -191,4 +191,25 @@ table .table-header {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+
+img {
+  border-radius: 100%;
+  padding: 0px 20px 0px 20px;
+}
+
+.bars {
+  height: 700px;
+  max-height: 50vh;
+  padding: 30px 10px 0;
+  --bar-placement: bottom;
+  --bar-gap: 40;
+  --bar-map: 50 #666, 70 salmon, 35 #9ee7a1, 15 #fff, 25 orange;
+  background: #111 paint(bar-chart);
+}
+
+@supports not (background: paint(bar-chart)) {
+  .bars:after {
+    content: 'Your browser does not support CSS Paint API :(';
+  }
+}
 /*# sourceMappingURL=korber.css.map */

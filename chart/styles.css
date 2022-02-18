@@ -1,0 +1,45 @@
+:root {
+  --bar-placement: bottom;
+  --bar-gap: 5;
+  --bar-padding-h: 10px;
+}
+h1 {
+  font-family: Ariel;
+  font-size: 2rem;
+}
+
+.bars {
+  height: 700px;
+  padding-top: 30px;
+  padding: 30px var(--bar-padding-h) 0;
+  --bar-map: 25 #ff0000, 15 #ffa500, 19 #006400, 19 #00008b, 10 #630330;
+  background: #111 paint(bar-chart);
+  background-color: #ffffff;
+  border: 0px;
+}
+
+@supports not (background: paint(bar-chart)) {
+  .bars:after {
+    content: 'Your browser does not support CSS Paint API :(';
+  }
+}
+.x-axis {
+  display: flex;
+  justify-content: stretch;
+  padding: 0 var(--bar-padding-h);
+  border: 2px solid rosybrown;
+}
+
+.x-axis .tick {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+  line-height: 20px;
+}
+
+.border {
+  border: 0px !important;
+  border-left: 1px solid black !important;
+  border-bottom: 1px solid black !important;
+  border-radius: 0px !important;
+}
